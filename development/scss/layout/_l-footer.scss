@@ -1,0 +1,9 @@
+
+
+.site-footer {
+	@include container(95vw);
+
+	@include bp(m) {
+		@include container(85vw);
+	}
+}

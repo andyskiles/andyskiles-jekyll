@@ -1,0 +1,345 @@
+@charset "UTF-8";
+/*==============
+$MIXINS
+===============*/
+/* Breakpoints */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@font-face {
+  font-family: 'sudokublack';
+  src: url("fonts/sudoku_black/sudoku_black-webfont.eot");
+  src: url("fonts/sudoku_black/sudoku_black-webfont.eot?#iefix") format("embedded-opentype"), url("fonts/sudoku_black/sudoku_black-webfont.woff") format("woff"), url("fonts/sudoku_black/sudoku_black-webfont.ttf") format("truetype"), url("fonts/sudoku_black/sudoku_black-webfont.svg#sudokublack") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Sanchez Light';
+  src: url("fonts/sanchez_light/Sanchez-Light.eot");
+  /* IE9 Compat Modes */
+  src: url("fonts/sanchez_light/Sanchez-Light.eot?#iefix") format("embedded-opentype"), url("fonts/sanchez_light/Sanchez-Light.woff") format("woff"), url("fonts/sanchez_light/Sanchez-Light.ttf") format("truetype"), url("fonts/sanchez_light/Sanchez-Light.svg#6336b204f4a405670528d0ad5214ead7") format("svg");
+  /* Legacy iOS */
+  font-style: normal;
+  font-weight: 200;
+}
+html {
+  font: 100%/1.5 Arial, sans-serif;
+}
+@media (min-width: 64.063em) {
+  html {
+    font: 125%/1.5 Arial, sans-serif;
+  }
+}
+
+body {
+  font-family: 'Sanchez Light', sans-serif;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+h2 {
+  margin-bottom: .3em;
+}
+
+h3 {
+  margin-bottom: .5em;
+}
+
+h4 {
+  margin-bottom: 1em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #4169E1;
+  transition: all 0.2s ease-out;
+}
+a:hover {
+  transition: all 0.2s ease-in;
+  color: #6d8ce8;
+}
+
+h1 {
+  font-size: 2em;
+}
+
+h2 {
+  font-size: 1.5em;
+}
+
+h3 {
+  font-size: 1.17em;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+h5 {
+  font-size: 0.83em;
+}
+
+p {
+  line-height: 1.5;
+  margin: 0 0 1em;
+}
+
+strong {
+  font-weight: bold;
+}
+
+em {
+  font-style: italic;
+}
+
+code, pre {
+  font-family: monospace, serif;
+  font-size: .9em;
+  background: whitesmoke;
+  padding-left: 1em;
+  display: block;
+}
+
+.highlight {
+  margin-bottom: 2em;
+}
+
+pre {
+  border-top: 1px solid whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  padding: .5em 0;
+  margin-bottom: 1em;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 1em 0;
+}
+
+li {
+  padding-left: 1em;
+  text-indent: -.7em;
+}
+
+li:before {
+  content: "• ";
+  color: #4169E1;
+}
+
+blockquote {
+  font-style: italic;
+  border-left: 5px solid #4169E1;
+  padding: .3em 0 .3em 1em;
+  margin-bottom: 1em;
+}
+
+@media (min-width: 40.063em) and (max-width: 64em) {
+  .site-header .row {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .site-header .row:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+article section, .pagination {
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+article section:after, .pagination:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  article section, .pagination {
+    max-width: 80vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  article section:after, .pagination:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+@media (min-width: 64.063em) {
+  article section, .pagination {
+    max-width: 45vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  article section:after, .pagination:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.site-footer {
+  max-width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+.site-footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  .site-footer {
+    max-width: 85vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .site-footer:after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+}
+
+.site-header {
+  text-transform: lowercase;
+  background: whitesmoke;
+  padding-top: .5em;
+  overflow: hidden;
+  font-family: "sudokublack", sans-serif;
+}
+.site-header h2 {
+  margin: 0 auto;
+  font-size: 2em;
+  padding-left: .5em;
+  float: left;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  .site-header h2 {
+    padding-left: 0;
+  }
+}
+.site-header h4 {
+  float: right;
+  padding-right: .5em;
+  font-size: 1.4em;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  .site-header h4 {
+    padding-right: 0;
+  }
+}
+.site-header a {
+  color: #4169E1;
+  transition: all 0.2s ease-out;
+}
+.site-header a:hover {
+  transition: all 0.2s ease-in;
+  color: #6d8ce8;
+}
+.site-header nav {
+  position: relative;
+  top: 10px;
+}
+
+main {
+  padding-bottom: 2em;
+}
+
+.posts {
+  margin-left: 0;
+}
+.posts li {
+  padding: .2em .2em;
+  font-family: "sudokublack", sans-serif;
+  font-size: 3.5em;
+  line-height: 1em;
+  text-indent: 0;
+}
+.posts li:before {
+  content: none;
+}
+.posts li:nth-child(odd) {
+  background: #4169E1;
+  transition: all 0.2s ease-out;
+}
+.posts li:nth-child(odd):hover {
+  background: black;
+  transition: all 0.2s ease-in;
+}
+.posts li:nth-child(even) {
+  background: #2b58de;
+  transition: all 0.2s ease-out;
+}
+.posts li:nth-child(even):hover {
+  transition: all 0.2s ease-in;
+  background: black;
+}
+.posts a {
+  color: white;
+}
+
+article h1 {
+  font-size: 4.5em;
+  line-height: 1em;
+  text-shadow: 1px 1px 1px #4169E1;
+  margin-bottom: .3em;
+  color: whitesmoke;
+  border-top: 10px dotted whitesmoke;
+  border-bottom: 10px dotted whitesmoke;
+  background: #4169E1;
+  padding: .2em .2em;
+  font-family: "sudokublack", sans-serif;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  article h1 {
+    text-align: center;
+    font-size: 5.5em;
+  }
+}
+@media (min-width: 64.063em) {
+  article h1 {
+    text-align: center;
+    font-size: 7em;
+  }
+}
+
+.pagination {
+  margin-top: 3em;
+  overflow: hidden;
+}
+.pagination a {
+  background: #4169E1;
+  color: white;
+  border-radius: 2px;
+  padding: 3px 8px;
+  text-align: center;
+  transition: all 0.2s ease-out;
+}
+.pagination a:hover {
+  transition: all 0.2s ease-in;
+  background: black;
+}
+
+.prev {
+  float: left;
+  padding-right: 15px !important;
+}
+
+.next {
+  float: right;
+  padding-left: 15px !important;
+}
+
+.site-footer {
+  text-align: center;
+  padding-bottom: 20px;
+}

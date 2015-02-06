@@ -1,0 +1,21 @@
+
+main {
+}
+
+
+
+article {}
+
+article header{}
+
+article section, .pagination {
+	@include container(95vw);
+
+	@include bp(m) {
+		@include container(80vw);
+	}
+
+	@include bp(l) {
+		@include container(45vw);
+	}
+}

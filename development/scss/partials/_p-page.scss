@@ -1,0 +1,116 @@
+
+
+main {
+	padding-bottom: 2em;
+}
+
+
+// home page posts
+.posts {
+	margin-left: 0;
+
+	li {
+		padding: .2em .2em;
+		font-family: "sudokublack", sans-serif;
+		font-size: 3.5em;
+		line-height: 1em;
+		text-indent: 0;
+
+		&:before {
+			content: none;
+		}
+
+		&:nth-child(odd) {
+			background: $blue;
+			transition: all 0.2s ease-out;
+
+			&:hover {
+				background: darken($blue, 90%);
+				transition: all 0.2s ease-in;
+			}
+		}
+
+		&:nth-child(even) {
+			background: darken($blue, 5%);
+			transition: all 0.2s ease-out;
+
+			&:hover {
+				transition: all 0.2s ease-in;
+				background: darken($blue, 70%);
+			}
+		}
+	}
+
+	a {
+		color: white;
+	}
+}
+
+
+
+article {
+
+	// title
+	h1 {
+		font-size: 4.5em;
+		line-height: 1em;
+		text-shadow: 1px 1px 1px $blue;
+		margin-bottom: .3em;
+		color: whitesmoke;
+		border-top: 10px dotted whitesmoke;
+		border-bottom: 10px dotted whitesmoke;
+		background: $blue;
+		padding: .2em .2em;
+		font-family: "sudokublack", sans-serif;
+
+		@include bp(m) {
+			text-align: center;
+			font-size: 5.5em;
+		}
+
+		@include bp(l) {
+			text-align: center;
+			font-size: 7em;
+		}
+	}
+}
+
+// pagination
+.pagination {
+	margin-top: 3em;
+	overflow: hidden;
+
+	a {
+		background: $blue;
+		color: white;
+		border-radius: 2px;
+		padding: 3px 8px;
+		text-align: center;
+		transition: all 0.2s ease-out;
+
+		&:hover {
+			transition: all 0.2s ease-in;
+			background: black;
+		}
+	}
+}
+
+.prev {
+	float: left;
+	padding-right: 15px !important;
+}
+
+.next {
+	float: right;
+	padding-left: 15px !important;
+}
+
+
+
+
+// vault
+.vault {}
+
+
+
+

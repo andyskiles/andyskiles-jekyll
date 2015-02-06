@@ -1,0 +1,3 @@
+# Dependency directory
+.sass-cache
+node_modules

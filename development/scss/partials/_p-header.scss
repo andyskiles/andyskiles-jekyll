@@ -1,0 +1,45 @@
+
+
+.site-header {
+	text-transform: lowercase;
+	background: whitesmoke;
+	padding-top: .5em;
+	overflow: hidden;
+	font-family: "sudokublack", sans-serif;
+
+	h2 {
+		margin: 0 auto;
+		font-size: 2em;
+		padding-left: .5em;
+		float: left;
+
+		@include bp(m) {
+			padding-left: 0;
+		}
+	}
+
+	h4 {
+		float: right;
+		padding-right: .5em;
+		font-size: 1.4em;
+
+		@include bp(m) {
+			padding-right: 0;
+		}
+	}
+
+	a {
+		color: $blue;
+		transition: all 0.2s ease-out;
+
+	    &:hover {
+	      transition: all 0.2s ease-in;
+	      color: lighten($blue, 10%);
+	    }
+	}
+
+	nav {
+		position: relative;
+		top: 10px;
+	}
+}

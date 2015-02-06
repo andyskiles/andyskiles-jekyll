@@ -1,0 +1,6 @@
+name: Andy Skiles
+markdown: redcarpet
+pygments: true
+auto: true
+exclude: node_modules, gulpfile.js, development
+permalink: none
