@@ -80,5 +80,33 @@ blockquote {
 
 
 
+table {
+	margin: 1em 0 2em 0;
+	width: 100%;
+
+	tr:first-of-type {
+		background: $blue;
+		color: white;
+		text-transform: uppercase;
+	}
+
+	th {
+		text-align: left;
+		padding: 5px;
+	}
+
+	td {
+		padding: 5px;
+	}
+
+	td + td {
+	}
+}
+
+tr:nth-child(even) {
+    background-color: whitesmoke;
+}
+
+
 
 

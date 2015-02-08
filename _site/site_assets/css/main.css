@@ -138,6 +138,27 @@ blockquote {
   margin-bottom: 1em;
 }
 
+table {
+  margin: 1em 0 2em 0;
+  width: 100%;
+}
+table tr:first-of-type {
+  background: #4169E1;
+  color: white;
+  text-transform: uppercase;
+}
+table th {
+  text-align: left;
+  padding: 5px;
+}
+table td {
+  padding: 5px;
+}
+
+tr:nth-child(even) {
+  background-color: whitesmoke;
+}
+
 @media (min-width: 40.063em) and (max-width: 64em) {
   .site-header .row {
     max-width: 80vw;
@@ -151,35 +172,54 @@ blockquote {
   }
 }
 
-article section, .pagination {
+@media (min-width: 64.063em) {
+  .vault .row {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+}
+
+@media (min-width: 64.063em) {
+  .vault .cat-block {
+    -webkit-flex-grow: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
+}
+
+.page section, article section, .pagination {
   max-width: 95vw;
   margin-left: auto;
   margin-right: auto;
 }
-article section:after, .pagination:after {
+.page section:after, article section:after, .pagination:after {
   content: " ";
   display: block;
   clear: both;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  article section, .pagination {
+  .page section, article section, .pagination {
     max-width: 80vw;
     margin-left: auto;
     margin-right: auto;
   }
-  article section:after, .pagination:after {
+  .page section:after, article section:after, .pagination:after {
     content: " ";
     display: block;
     clear: both;
   }
 }
 @media (min-width: 64.063em) {
-  article section, .pagination {
+  .page section, article section, .pagination {
     max-width: 45vw;
     margin-left: auto;
     margin-right: auto;
   }
-  article section:after, .pagination:after {
+  .page section:after, article section:after, .pagination:after {
     content: " ";
     display: block;
     clear: both;
@@ -231,10 +271,17 @@ article section:after, .pagination:after {
   float: right;
   padding-right: .5em;
   font-size: 1.4em;
+  margin-left: .1em;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
   .site-header h4 {
     padding-right: 0;
+    margin-left: 0.5em;
+  }
+}
+@media (min-width: 64.063em) {
+  .site-header h4 {
+    margin-left: 0.5em;
   }
 }
 .site-header a {
@@ -287,7 +334,7 @@ main {
   color: white;
 }
 
-article h1 {
+article h1, .page h1 {
   font-size: 4.5em;
   line-height: 1em;
   text-shadow: 1px 1px 1px #4169E1;
@@ -300,13 +347,13 @@ article h1 {
   font-family: "sudokublack", sans-serif;
 }
 @media (min-width: 40.063em) and (max-width: 64em) {
-  article h1 {
+  article h1, .page h1 {
     text-align: center;
     font-size: 5.5em;
   }
 }
 @media (min-width: 64.063em) {
-  article h1 {
+  article h1, .page h1 {
     text-align: center;
     font-size: 7em;
   }
@@ -339,7 +386,119 @@ article h1 {
   padding-left: 15px !important;
 }
 
+.cat-block h2 {
+  background: #2e2e2e;
+  color: white;
+  margin-bottom: 0;
+  padding: .2em .2em;
+  font-family: "sudokublack";
+  font-size: 2em;
+}
+.cat-block ul {
+  margin-bottom: 0;
+}
+
+@-webkit-keyframes fill {
+  0% {
+    fill: transparent;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  50% {
+    fill: white;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: transparent;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+
+@keyframes fill {
+  0% {
+    fill: transparent;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  50% {
+    fill: white;
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    fill: transparent;
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+@-webkit-keyframes trans {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+@keyframes trans {
+  0% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+  50% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(0.2);
+            transform: scale(0.2);
+  }
+}
+.websuasion {
+  height: 134px;
+  width: 134px;
+}
+.websuasion .st0 {
+  fill: #28C1D9;
+  stroke-width: 0.9923;
+  stroke: #28C1D9;
+  -webkit-animation-name: trans;
+          animation-name: trans;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.websuasion .st1 {
+  fill: #231F20;
+  stroke-width: 0.9923;
+  stroke: #231F20;
+  -webkit-animation-name: trans;
+          animation-name: trans;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+.websuasion .st2 {
+  fill: white;
+  -webkit-animation-name: fill;
+          animation-name: fill;
+  -webkit-animation-duration: 5s;
+          animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
 .site-footer {
   text-align: center;
   padding-bottom: 20px;
+  clear: both;
 }

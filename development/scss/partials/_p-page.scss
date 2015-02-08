@@ -48,7 +48,15 @@ main {
 
 
 
-article {
+
+// single page
+.page {}
+
+
+
+
+// single post
+article, .page {
 
 	// title
 	h1 {
@@ -111,6 +119,89 @@ article {
 // vault
 .vault {}
 
+.cat-block {
+
+	h2 {
+		background: lighten(black, 18%);
+		color: white;
+		margin-bottom: 0;
+		padding: .2em .2em;
+		font-family: "sudokublack";
+		font-size: 2em;
+	}
+
+	ul {
+		margin-bottom: 0;
+	}
+}
+
+
+
+
+
+// websuasion
+$w-blue: #28C1D9;
+
+@keyframes fill {
+0% {
+  fill: transparent;
+  transform: scale(0.2);
+}
+50% {
+  fill: white;
+  transform: scale(1);
+}
+100% {
+  fill: transparent;
+  transform: scale(0.2);
+}
+}
+
+@keyframes trans {
+0% {
+  transform: scale(0.2);
+}
+50% {
+  transform: scale(1);
+}
+100% {
+  transform: scale(0.2);
+}
+}
+
+// svg
+.websuasion {
+	height: 134px;
+	width: 134px;
+	
+	// bottom half
+	.st0 {
+		fill: $w-blue;
+		stroke-width: 0.9923;
+		stroke: $w-blue;
+		animation-name: trans;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+
+	// top half
+	.st1 {
+		fill:#231F20;
+		stroke-width: 0.9923;
+		stroke:#231F20;
+		animation-name: trans;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+
+	// {W}
+	.st2 {
+		fill: white;
+		animation-name: fill;
+		animation-duration: 5s;
+		animation-iteration-count: infinite;
+	}
+}
 
 
 

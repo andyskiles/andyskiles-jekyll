@@ -94,7 +94,7 @@ gulp.task('watch', function () {
     gulp.watch('development/js/main.js', ['scripts']);
 
     // Watch .html files
-    gulp.watch(['_layouts/**', 'index.html', 'vault/index.html', '_includes/**', '_posts/**', 'site_assets/**'], ['jekyll']);
+    gulp.watch(['_layouts/**', 'about/index.md', 'vault/index.html', '_includes/**', '_posts/**', 'site_assets/**'], ['jekyll']);
 
     // Watch site assets
     gulp.watch(['site_assets/**'], ['jekyll']);

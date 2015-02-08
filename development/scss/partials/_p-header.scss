@@ -22,9 +22,15 @@
 		float: right;
 		padding-right: .5em;
 		font-size: 1.4em;
+		margin-left: .1em;
 
 		@include bp(m) {
 			padding-right: 0;
+			margin-left: 0.5em;
+		}
+
+		@include bp(l) {
+			margin-left: 0.5em;
 		}
 	}
 
