@@ -386,6 +386,9 @@ article h1, .page h1 {
   padding-left: 15px !important;
 }
 
+.cat-block {
+  background: #2e2e2e;
+}
 .cat-block h2 {
   background: #2e2e2e;
   color: white;
