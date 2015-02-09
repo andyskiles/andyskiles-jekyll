@@ -8,7 +8,7 @@ var gulp = require('gulp'),
     webserver = require('gulp-webserver'),
     rename = require('gulp-rename'),
     notify = require('gulp-notify'),
-    sfx = require("sfx");
+    sfx = require("sfx"),
     
     // css plugins
     sass = require('gulp-ruby-sass'),
