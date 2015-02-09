@@ -333,6 +333,23 @@ main {
 .posts a {
   color: white;
 }
+.posts time {
+  color: white;
+  display: block;
+  font-size: .5em;
+}
+@media (min-width: 40.063em) and (max-width: 64em) {
+  .posts time {
+    float: right;
+    display: inline;
+  }
+}
+@media (min-width: 64.063em) {
+  .posts time {
+    float: right;
+    display: inline;
+  }
+}
 
 article h1, .page h1 {
   font-size: 4.5em;

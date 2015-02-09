@@ -44,6 +44,22 @@ main {
 	a {
 		color: white;
 	}
+
+	time {
+		color: white;
+		display: block;
+		font-size: .5em;
+
+		@include bp(m) {
+			float: right;
+			display: inline;
+		}
+
+		@include bp(l) {
+			float: right;
+			display: inline;
+		}
+	}
 }
 
 
