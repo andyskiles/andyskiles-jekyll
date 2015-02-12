@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Sprinkles | Andy Skiles</title>
+        <title>Hocus | Andy Skiles</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Andy Skiles" />
-        <meta name="description" content="<p>Tabbing to see all of the M-x commands in Emacs is fun, rewarding, and overwhelming. Slowly, I&#39;ve been working my way through them. I&#39;m only on the ones that start with the letter c, and only a few have stuck to memory. </p>
+        <meta name="description" content="<p>I made the switch to BrowserSync with a couple lines of code in my gulpfile.js and I like it. It&#39;s fast, powerful, and has cool features. I tried making the switch months ago, but it never stuck around. 2.0 just came out so I figured why not take it for a ride.</p>
 " />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@andyskiles" />
@@ -51,36 +51,42 @@
      <article>
 	<header>
 		<h1>
-			Sprinkles
+			Hocus
 		</h1>
 	</header>
 
 	<section>
-		<p>Tabbing to see all of the M-x commands in Emacs is fun, rewarding, and overwhelming. Slowly, I&#39;ve been working my way through them. I&#39;m only on the ones that start with the letter c, and only a few have stuck to memory. </p>
+		<p>I made the switch to BrowserSync with a couple lines of code in my gulpfile.js and I like it. It&#39;s fast, powerful, and has cool features. I tried making the switch months ago, but it never stuck around. 2.0 just came out so I figured why not take it for a ride.</p>
 
-<p>Perhaps my most favorite command in Emacs yet is:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">M-x animate-birthday-present
+<p>Why BrowserSync is cool:</p>
+
+<ul>
+<li>Fires up a local webserver</li>
+<li>Fires up an external webserver (connect devices to it)</li>
+<li>Injects CSS</li>
+<li>Injects JS</li>
+<li>Injects HTML</li>
+<li>Syncs scrolling across browser</li>
+</ul>
+
+<p>All of it is pretty seamless. I was expecting a lot of frustration considering I had a nice workflow already. I ran:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">npm install browser-sync --save-dev
 </code></pre></div>
-<p>The birthday present command gives you the ability to create an awesome birthday present for that special someone in your life. You are prompted for the gift receiver&#39;s name, then here is a nice animation that runs, and reads out: </p>
+<p>and was up and running in no time. Additionally, I added:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">browserSync.reload();
+</code></pre></div>
+<p>to some of my Gulp tasks for compiling Sass and JS. </p>
 
-<blockquote>
-<p>Happy Birthday, JoeBlow. You are my sunshine, My only sunshine. I&#39;m awful sad that You&#39;ve moved away. Let&#39;s talk together And love more deeply. Please bring back my sunshine to stay!</p>
-</blockquote>
-
-<p>It&#39;s quirky. It&#39;s fun. And it can be inappropriate depending on the receiver. It&#39;s another reason I&#39;m fascinated with Emacs. </p>
+<p>BrowserSync. Fancy.</p>
 
 	</section>
 
 	<div class="pagination">
 		 
-    		<a rel="prev" href="/design/oldflow.html" class="prev">
+    		<a rel="prev" href="/emacs/sprinkles.html" class="prev">
     			&larr; Old
     		</a>
 		
-		 
-    		<a rel="next" href="/design/hocus.html" class="next">
-    			New &rarr;
-    		</a>
 		
 	</div>
 
