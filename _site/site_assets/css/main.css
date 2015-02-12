@@ -316,19 +316,9 @@ main {
 }
 .posts li:nth-child(odd) {
   background: #4169E1;
-  transition: all 0.2s ease-out;
-}
-.posts li:nth-child(odd):hover {
-  background: black;
-  transition: all 0.2s ease-in;
 }
 .posts li:nth-child(even) {
   background: #2b58de;
-  transition: all 0.2s ease-out;
-}
-.posts li:nth-child(even):hover {
-  transition: all 0.2s ease-in;
-  background: black;
 }
 .posts a {
   color: white;
@@ -401,6 +391,20 @@ article h1, .page h1 {
 .next {
   float: right;
   padding-left: 15px !important;
+}
+
+@media (min-width: 64.063em) {
+  .posts li {
+    transition: all 0.2s ease-out;
+  }
+}
+@media (min-width: 64.063em) {
+  .posts li:hover {
+    transition: all 0.2s ease-in;
+    -webkit-transform: rotateX(180deg);
+            transform: rotateX(180deg);
+    background: black;
+  }
 }
 
 .cat-block {

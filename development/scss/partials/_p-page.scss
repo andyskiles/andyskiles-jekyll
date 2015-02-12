@@ -22,22 +22,10 @@ main {
 
 		&:nth-child(odd) {
 			background: $blue;
-			transition: all 0.2s ease-out;
-
-			&:hover {
-				background: darken($blue, 90%);
-				transition: all 0.2s ease-in;
-			}
 		}
 
 		&:nth-child(even) {
 			background: darken($blue, 5%);
-			transition: all 0.2s ease-out;
-
-			&:hover {
-				transition: all 0.2s ease-in;
-				background: darken($blue, 70%);
-			}
 		}
 	}
 
@@ -133,6 +121,26 @@ article, .page {
 
 
 // vault
+.posts {
+
+	li {
+		
+		@include bp(l) {
+			transition: all 0.2s ease-out;
+		}
+	}
+
+	li:hover {
+		
+		@include bp(l) {
+			transition: all 0.2s ease-in;
+			transform: rotateX(180deg);
+			background: darken($blue, 70%);
+		}
+	}
+}
+
+
 .vault {}
 
 .cat-block {
