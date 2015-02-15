@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Hocus | Andy Skiles</title>
+        <title>Sshweet | Andy Skiles</title>
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Andy Skiles" />
-        <meta name="description" content="<p>I made the switch to BrowserSync with a couple lines of code in my gulpfile.js and I like it. It&#39;s fast, powerful, and has cool features. I tried making the switch months ago, but it never stuck around. 2.0 just came out so I figured why not take it for a ride.</p>
+        <meta name="description" content="<p>I&#39;ve been doing a lot of configuring with my ssh setup recently. Before, it was a mess. I had generated a bunch of ssh keys and didn&#39;t have a clue which one was to which. I found out you only really need one, so I deleted them all and made a new one. </p>
 " />
         <meta name="twitter:card" content="summary" />
         <meta name="twitter:site" content="@andyskiles" />
@@ -51,46 +51,39 @@
      <article>
 	<header>
 		<h1>
-			Hocus
+			Sshweet
 		</h1>
 	</header>
 
 	<section>
-		<p>I made the switch to BrowserSync with a couple lines of code in my gulpfile.js and I like it. It&#39;s fast, powerful, and has cool features. I tried making the switch months ago, but it never stuck around. 2.0 just came out so I figured why not take it for a ride.</p>
+		<p>I&#39;ve been doing a lot of configuring with my ssh setup recently. Before, it was a mess. I had generated a bunch of ssh keys and didn&#39;t have a clue which one was to which. I found out you only really need one, so I deleted them all and made a new one. </p>
 
-<p>Why BrowserSync is cool:</p>
-
-<ul>
-<li>Fires up a local webserver</li>
-<li>Fires up an external webserver (connect devices to it)</li>
-<li>Injects CSS</li>
-<li>Injects JS</li>
-<li>Injects HTML</li>
-<li>Syncs scrolling across browser</li>
-</ul>
-
-<p>All of it is pretty seamless. I was expecting a lot of frustration considering I had a nice workflow already. I ran:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">npm install browser-sync --save-dev
+<p>After setting up my config something like:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">Host billybob
+    User billybob
+    Port 6969
+    Hostname billybob.com
 </code></pre></div>
-<p>and was up and running in no time. Additionally, I added:</p>
-<div class="highlight"><pre><code class="language-text" data-lang="text">browserSync.reload();
+<p>I can now ssh into the remote server in Emacs (or terminal) by typing:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">ssh:billybob (Emacs)
+ssh billybob (Terminal)
 </code></pre></div>
-<p>to some of my Gulp tasks for compiling Sass and JS. </p>
-
-<p>BrowserSync. Fancy.</p>
+<p>This beats having to type in: </p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">ssh billybob@billybob.com -p 6969
+</code></pre></div>
+<p>everytime I want to connect to the remote server. I&#39;m still figuring out how to do shell stuff in Emacs, so I&#39;m mostly using:</p>
+<div class="highlight"><pre><code class="language-text" data-lang="text">C-x d (Dired)
+</code></pre></div>
+<p>to navigate around the directories on the remote server. Additionally, it feels nice to be able to browse directories, change permissions, and edit files in a single application without a single click of the mouse.</p>
 
 	</section>
 
 	<div class="pagination">
 		 
-    		<a rel="prev" href="/emacs/sprinkles.html" class="prev">
+    		<a rel="prev" href="/design/hocus.html" class="prev">
     			&larr; Old
     		</a>
 		
-		 
-    		<a rel="next" href="/emacs/sshweet.html" class="next">
-    			New &rarr;
-    		</a>
 		
 	</div>
 
