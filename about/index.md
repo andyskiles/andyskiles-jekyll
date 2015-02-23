@@ -103,7 +103,7 @@ Along the way, I've come across many books that made things, make sense. As I've
 </table>
 
 ### Nowadays
-Currently, I'm helping local businesses develop their social media presences with my company [Playbook Media](http://www.playbookmediainc.co) and making stuff for the Web with [Websuasion] (http://www.websuasion.com).
+Currently, I'm helping local businesses develop their social media presences with my company [Playbook Media](http://www.playbookmedia.co) and making stuff for the Web with [Websuasion] (http://www.websuasion.com).
 
 
 
