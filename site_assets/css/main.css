@@ -55,12 +55,12 @@ h4 {
 a {
   text-decoration: none;
   font-weight: bold;
-  color: #4169E1;
+  color: tomato;
   transition: all 0.2s ease-out;
 }
 a:hover {
   transition: all 0.2s ease-in;
-  color: #6d8ce8;
+  color: #ff8e7a;
 }
 
 h1 {
@@ -128,12 +128,12 @@ li {
 
 li:before {
   content: "• ";
-  color: #4169E1;
+  color: tomato;
 }
 
 blockquote {
   font-style: italic;
-  border-left: 5px solid #4169E1;
+  border-left: 5px solid tomato;
   padding: .3em 0 .3em 1em;
   margin-bottom: 1em;
 }
@@ -143,7 +143,7 @@ table {
   width: 100%;
 }
 table tr:first-of-type {
-  background: #4169E1;
+  background: tomato;
   color: white;
   text-transform: uppercase;
 }
@@ -285,12 +285,12 @@ tr:nth-child(even) {
   }
 }
 .site-header a {
-  color: #4169E1;
+  color: tomato;
   transition: all 0.2s ease-out;
 }
 .site-header a:hover {
   transition: all 0.2s ease-in;
-  color: #6d8ce8;
+  color: #ff8e7a;
 }
 .site-header nav {
   position: relative;
@@ -315,10 +315,10 @@ main {
   content: none;
 }
 .posts li:nth-child(odd) {
-  background: #4169E1;
+  background: tomato;
 }
 .posts li:nth-child(even) {
-  background: #2b58de;
+  background: #ff4d2d;
 }
 .posts a {
   color: white;
@@ -344,12 +344,12 @@ main {
 article h1, .page h1 {
   font-size: 4.5em;
   line-height: 1em;
-  text-shadow: 1px 1px 1px #4169E1;
+  text-shadow: 1px 1px 1px tomato;
   margin-bottom: .3em;
   color: whitesmoke;
   border-top: 10px dotted whitesmoke;
   border-bottom: 10px dotted whitesmoke;
-  background: #4169E1;
+  background: tomato;
   padding: .2em .2em;
   font-family: "sudokublack", sans-serif;
 }
@@ -371,7 +371,7 @@ article h1, .page h1 {
   overflow: hidden;
 }
 .pagination a {
-  background: #4169E1;
+  background: tomato;
   color: white;
   border-radius: 2px;
   padding: 3px 8px;
